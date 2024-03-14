@@ -10,3 +10,22 @@ li{
     padding: 0px 15px;
     font-family: "Work Sans", sans-serif;
 }
+.links{
+    color: inherit;
+    text-decoration: none;
+}
+/* buttons style */
+.btn__home1, .btn__home2{
+    border: none;
+    padding: 12px 30px;
+    border-radius: 22px;
+    font-family: Raleway, sans-serif;
+font-size: 16px;
+}
+.btn__home1{
+    background-color: black;
+    color: aliceblue;
+}
+.btn__home2{
+    font-weight: 600;
+}
