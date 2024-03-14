@@ -7,7 +7,7 @@ export default function Navbar() {
       style={{
         display: "flex",
         justifyContent: "space-between",
-        margin: "16px 70px",
+        margin: "22px 70px",
         position: "fixed",
         top: 0,
         left: 0,
@@ -22,7 +22,8 @@ export default function Navbar() {
       >
         <li>
           <Link to="#" className="links">
-            <span>Logo</span>
+          <img src="./logo.png" alt="logo_home" style={{height:'25px'}}/>
+          <span> Clippers</span>
           </Link>
         </li>
       </ul>
