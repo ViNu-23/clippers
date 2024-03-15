@@ -2,7 +2,8 @@ import About from "./About";
 import Navbar from "./Navbar";
 import { FaPlay } from "react-icons/fa";
 import Services from "./Services";
-import CarouselComponent from "./CarouselComponent";
+import Review from "./Review";
+import ReviewSecond from "./ReviewSecond";
 
 export default function Home() {
   return (
@@ -97,8 +98,7 @@ export default function Home() {
           style={{
             width: "50%",
             display: "flex",
-            position: "relative" /* Add position relative */,
-            // background: "red",
+            position: "relative" 
           }}
         >
           <div
@@ -106,22 +106,20 @@ export default function Home() {
               background: "#ebebeb",
               height: "500px",
               width: "380px",
-              position: "absolute" /* Add position absolute */,
+              position: "absolute" ,
               top: 0,
               right: 0,
-              zIndex: 1 /* Set z-index higher than the image */,
+              zIndex: 1 
             }}
           ></div>
           <div
             style={{
               background: "#fff",
-              // height: "300px",
-              // width: "400px",
               padding: "8px 12px",
-              position: "absolute" /* Add position absolute */,
+              position: "absolute" ,
               bottom: 100,
               left: 0,
-              zIndex: 11 /* Set z-index higher than the image */,
+              zIndex: 11 ,
               display: "flex",
               borderRadius: "10px",
               alignItems: "center",
@@ -144,19 +142,29 @@ export default function Home() {
               <p style={{ opacity: "0.6", fontSize: "14px" }}>
                 Favorite Barberman
               </p>
+              <div>
+<img src="./star.png" style={{height:'14px',marginRight:'2px'}}/>
+<img src="./star.png" style={{height:'14px',marginRight:'2px'}}/>
+<img src="./star.png" style={{height:'14px',marginRight:'2px'}}/>
+<img src="./star.png" style={{height:'14px',marginRight:'2px'}}/>
+<img src="./emptystar.png" style={{height:'14px',marginRight:'2px'}}/>
+
+
+
+
+              </div>
+
             </div>
           </div>
 
           <div
             style={{
               background: "#fff",
-              // height: "300px",
-              // width: "400px",
               padding: "8px 12px",
-              position: "absolute" /* Add position absolute */,
-              top: 100,
+              position: "absolute" ,
+              top: 150,
               right: 30,
-              zIndex: 10 /* Set z-index higher than the image */,
+              zIndex: 10 ,
               display: "flex",
               borderRadius: "10px",
               alignItems: "center",
@@ -189,7 +197,7 @@ export default function Home() {
           </div>
           <div
             style={{
-              position: "relative" /* Add position relative */,
+              position: "relative" ,
               zIndex: 10,
               alignItems: "end",
               display: "flex",
@@ -208,7 +216,8 @@ export default function Home() {
       </div>
       <About />
       <Services />
-      <CarouselComponent/>
+      <Review/>
+      <ReviewSecond/>
     </>
   );
 }

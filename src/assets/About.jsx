@@ -53,7 +53,7 @@ export default function About() {
           <p style={{fontFamily: "Raleway, sans-serif",fontSize:'20px'}}>About us</p>
           <p style={{fontFamily: "DM Serif Display, serif",fontSize:'40px',margin:'15px 0px'}}>Ultimate Grooming Experience</p>
           <p style={{fontFamily: "Raleway, sans-serif",opacity:'0.6'}}>
-            A barber is someone who cuts hair and shaves beards. Usually, it's
+            A barber is someone who cuts hair and shaves beards. Usually, its
             men who get to be a barber. Woman usuallygo to hairdressers instead.
             Barbers sometimes have a pole outside, which is red white in most
             countries.
