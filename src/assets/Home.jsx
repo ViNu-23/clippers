@@ -1,5 +1,8 @@
+import About from "./About";
 import Navbar from "./Navbar";
 import { FaPlay } from "react-icons/fa";
+import Services from "./Services";
+import CarouselComponent from "./CarouselComponent";
 
 export default function Home() {
   return (
@@ -10,7 +13,7 @@ export default function Home() {
           display: "flex",
           height: "100vh",
           background: "#f9f9f9",
-          padding: "0px 75px",
+          paddingLeft: "75px",
         }}
       >
         <div
@@ -51,21 +54,41 @@ export default function Home() {
               <span>Get started</span>
             </button>
             <button className="btn__home2">
-      <span style={{ display: 'flex', alignItems: 'center' }}>
-        <FaPlay size={16} style={{ marginRight: '5px' }} />Watch video
-      </span>
-    </button>
+              <span style={{ display: "flex", alignItems: "center" }}>
+                <FaPlay size={16} style={{ marginRight: "5px" }} />
+                Watch video
+              </span>
+            </button>
           </div>
           <div
             style={{
               display: "flex",
-              marginTop:'50px',
+              marginTop: "50px",
             }}
           >
-            <div style={{marginRight:'20px',alignItems:'center',justifyContent:'center',display:'flex'}}><img src="./logo.png" alt="logo_home" style={{height:'35px'}}/></div>
-            <div style={{display:'flex',flexDirection:'column'}}>
-              <span style={{fontFamily: "DM Serif Display, serif",}}>#1 National Best Barber</span>
-              <span style={{fontFamily: "Raleway, sans-serif", opacity: "0.5",}}>2021 National Award</span>
+            <div
+              style={{
+                marginRight: "20px",
+                alignItems: "center",
+                justifyContent: "center",
+                display: "flex",
+              }}
+            >
+              <img
+                src="./logo.png"
+                alt="logo_home"
+                style={{ height: "35px" }}
+              />
+            </div>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <span style={{ fontFamily: "DM Serif Display, serif" }}>
+                #1 National Best Barber
+              </span>
+              <span
+                style={{ fontFamily: "Raleway, sans-serif", opacity: "0.5" }}
+              >
+                2021 National Award
+              </span>
             </div>
           </div>
         </div>
@@ -73,14 +96,119 @@ export default function Home() {
         <div
           style={{
             width: "50%",
-            alignItems: "flex-end",
             display: "flex",
-            justifyContent: "center",
+            position: "relative" /* Add position relative */,
+            // background: "red",
           }}
         >
-          <img style={{ width: "650px" }} src="./home.png" alt="homeImg" />
+          <div
+            style={{
+              background: "#ebebeb",
+              height: "500px",
+              width: "380px",
+              position: "absolute" /* Add position absolute */,
+              top: 0,
+              right: 0,
+              zIndex: 1 /* Set z-index higher than the image */,
+            }}
+          ></div>
+          <div
+            style={{
+              background: "#fff",
+              // height: "300px",
+              // width: "400px",
+              padding: "8px 12px",
+              position: "absolute" /* Add position absolute */,
+              bottom: 100,
+              left: 0,
+              zIndex: 11 /* Set z-index higher than the image */,
+              display: "flex",
+              borderRadius: "10px",
+              alignItems: "center",
+              boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+            }}
+          >
+            <img
+              src="./review1.jpg"
+              alt="review_home"
+              style={{
+                height: "50px",
+                borderRadius: "6px",
+                marginRight: "10px",
+              }}
+            />
+            <div style={{ fontFamily: "Raleway, sans-serif" }}>
+              <span style={{ fontWeight: "500", fontSize: "16px" }}>
+                Jimmy Chairperson
+              </span>
+              <p style={{ opacity: "0.6", fontSize: "14px" }}>
+                Favorite Barberman
+              </p>
+            </div>
+          </div>
+
+          <div
+            style={{
+              background: "#fff",
+              // height: "300px",
+              // width: "400px",
+              padding: "8px 12px",
+              position: "absolute" /* Add position absolute */,
+              top: 100,
+              right: 30,
+              zIndex: 10 /* Set z-index higher than the image */,
+              display: "flex",
+              borderRadius: "10px",
+              alignItems: "center",
+              boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+            }}
+          >
+            <div style={{ fontFamily: "Raleway, sans-serif" }}>
+              <span
+                style={{
+                  fontWeight: "500",
+                  fontSize: "16px",
+                  direction: "ltr",
+                }}
+              >
+                Jimmy Chairperson
+              </span>
+              <p style={{ opacity: "0.6", fontSize: "14px", direction: "ltr" }}>
+                Favorite Barberman
+              </p>
+            </div>
+            <img
+              src="./review2.jpg"
+              alt="review_home"
+              style={{
+                height: "50px",
+                borderRadius: "6px",
+                marginLeft: "10px",
+              }}
+            />
+          </div>
+          <div
+            style={{
+              position: "relative" /* Add position relative */,
+              zIndex: 10,
+              alignItems: "end",
+              display: "flex",
+              justifyContent: "flex-start",
+            }}
+          >
+            <img
+              style={{
+                width: "550px",
+              }}
+              src="./home.png"
+              alt="homeImg"
+            />
+          </div>
         </div>
       </div>
+      <About />
+      <Services />
+      <CarouselComponent/>
     </>
   );
 }

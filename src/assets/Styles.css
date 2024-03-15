@@ -15,14 +15,14 @@ li{
     text-decoration: none;
 }
 /* buttons style */
-.btn__home1, .btn__home2{
+.btn__home1, .btn__home2, .button__about{
     border: none;
     padding: 12px 30px;
     border-radius: 22px;
     font-family: Raleway, sans-serif;
 font-size: 16px;
 }
-.btn__home1{
+.btn__home1,.button__about{
     background-color: black;
     color: aliceblue;
 }
