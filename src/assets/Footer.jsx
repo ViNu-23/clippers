@@ -52,7 +52,6 @@ export default function Footer() {
                 fontSize: "16px",
                 color: "#fff",
                 background: "#000",
-                opacity: "0.6",
                 display: "flex",
                 alignItems: "center",
               }}
@@ -95,7 +94,6 @@ export default function Footer() {
                   fontSize: "16px",
                   color: "#fff",
                   background: "#000",
-                  opacity: "0.6",
                   borderRadius: "18px",
                   marginLeft: "10px",
                 }}
@@ -105,7 +103,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div style={{ padding: "25px 0px 40px 0px", display: "flex", fontFamily: "Raleway, sans-serif",justifyContent:'space-between',borderBottom:'1px solid #f9f9f9' }}>
+        <div style={{ padding: "25px 0px 40px 0px", display: "flex", fontFamily: "Raleway, sans-serif",justifyContent:'space-between',borderBottom:'1px solid #fff' }}>
           
           <div style={{ display: "flex",flexDirection:'column',width:'15%',margin:'10px' }}>
             <span style={{fontWeight:'500',fontSize:'16px',margin:'10px 0'}}>NAVIGATION</span>
@@ -148,9 +146,9 @@ export default function Footer() {
           <div style={{display:'flex',alignItems:'center'}}><LuCopyright size={20}/> <span style={{marginLeft:'8px'}}>2022 Clippers. lnc All rights reserved.</span></div>
           <div> Made With 🤍 By <a href="https://github.com/ViNu-23">ViNu</a></div>
           <div>
-            <FaGithubSquare size={30} style={{marginRight:'6px'}}/>
-            <FaLinkedin size={30} style={{marginRight:'6px'}}/>
-            <CgWebsite size={30}/></div>
+            <FaGithubSquare size={25} style={{marginRight:'10px'}}/>
+            <FaLinkedin size={25} style={{marginRight:'10px'}}/>
+            <CgWebsite size={25}/></div>
         </div>
       </div>
     </>
