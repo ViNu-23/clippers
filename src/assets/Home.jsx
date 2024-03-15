@@ -4,6 +4,8 @@ import { FaPlay } from "react-icons/fa";
 import Services from "./Services";
 import Review from "./Review";
 import ReviewSecond from "./ReviewSecond";
+import Membership from "./Membership";
+import Footer from "./Footer";
 
 export default function Home() {
   return (
@@ -217,7 +219,8 @@ export default function Home() {
       <About />
       <Services />
       <Review/>
-      <ReviewSecond/>
+      <Membership/>
+      <Footer/>
     </>
   );
 }

@@ -1,31 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-li{
-    padding: 0px 15px;
-    font-family: "Work Sans", sans-serif;
+li {
+  padding: 0px 15px;
+  font-family: "Work Sans", sans-serif;
 }
-.links{
-    color: inherit;
-    text-decoration: none;
+.links {
+  color: inherit;
+  text-decoration: none;
 }
 /* buttons style */
-.btn__home1, .btn__home2, .button__about{
-    border: none;
-    padding: 12px 30px;
-    border-radius: 22px;
-    font-family: Raleway, sans-serif;
-font-size: 16px;
+.btn__home1,
+.btn__home2,
+.button__about,
+.help {
+  border: none;
+  padding: 12px 30px;
+  border-radius: 22px;
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
 }
-.btn__home1,.button__about{
-    background-color: black;
-    color: aliceblue;
+.btn__home1,
+.button__about,
+.help {
+  background-color: black;
+  color: aliceblue;
 }
-.btn__home2{
-    font-weight: 600;
+.btn__home2 {
+  font-weight: 600;
+}
+.membership_Plans:hover {
+  box-shadow: rgba(223, 30, 30, 0.05) 0px 0px 0px 1px;
+  border: 2px solid rgb(0, 0, 0);
+}
+td,
+th {
+  padding: 12px 0px;
+}
+th {
+  font-weight: 500;
 }
