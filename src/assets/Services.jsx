@@ -40,7 +40,7 @@ export default function Services() {
               textAlign: "left",
             }}
           >
-            <img src="./scissors.png" alt="logo" style={{ width: "40px" }} />
+            <img loading="lazy" src="./scissors.png" alt="logo" style={{ width: "40px" }} />
             <p
               style={{
                 fontFamily: "DM Serif Display, serif",
@@ -60,7 +60,7 @@ export default function Services() {
               textAlign: "left",
             }}
           >
-            <img src="./razor.png" alt="logo" style={{ width: "40px" }} />
+            <img loading="lazy" src="./razor.png" alt="logo" style={{ width: "40px" }} />
             <p
               style={{
                 fontFamily: "DM Serif Display, serif",
@@ -80,7 +80,7 @@ export default function Services() {
               textAlign: "left",
             }}
           >
-            <img src="./beard.png" alt="logo" style={{ width: "40px" }} />
+            <img loading="lazy" src="./beard.png" alt="logo" style={{ width: "40px" }} />
             <p
               style={{
                 fontFamily: "DM Serif Display, serif",
@@ -100,7 +100,7 @@ export default function Services() {
               textAlign: "left",
             }}
           >
-            <img src="./dandruff.png" alt="logo" style={{ width: "40px" }} />
+            <img loading="lazy" src="./dandruff.png" alt="logo" style={{ width: "40px" }} />
             <p
               style={{
                 fontFamily: "DM Serif Display, serif",
@@ -120,7 +120,7 @@ export default function Services() {
               textAlign: "left",
             }}
           >
-            <img src="./serum.png" alt="logo" style={{ width: "40px" }} />
+            <img loading="lazy" src="./serum.png" alt="logo" style={{ width: "40px" }} />
             <p
               style={{
                 fontFamily: "DM Serif Display, serif",
@@ -141,7 +141,7 @@ export default function Services() {
               textAlign: "left",
             }}
           >
-            <img src="./hair-care.png" alt="logo" style={{ width: "40px" }} />
+            <img loading="lazy" src="./hair-care.png" alt="logo" style={{ width: "40px" }} />
             <p
               style={{
                 fontFamily: "DM Serif Display, serif",

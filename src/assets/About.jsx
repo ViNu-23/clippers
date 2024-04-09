@@ -24,6 +24,7 @@ export default function About() {
           <img
             src="./about1.jpg"
             alt="about"
+            loading="lazy"
             style={{
               height: "375px",
               borderRadius: "4px",
@@ -32,6 +33,7 @@ export default function About() {
           />
           <div style={{ display: "flex", flexDirection: "column" }}>
             <img
+            loading="lazy"
               src="./about2.jpg"
               alt="about"
               style={{
@@ -41,6 +43,7 @@ export default function About() {
               }}
             />
             <img
+            loading="lazy"
               src="./about3.jpg"
               alt="about"
               style={{ height: "180px", borderRadius: "4px" }}

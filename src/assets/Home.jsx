@@ -3,7 +3,6 @@ import Navbar from "./Navbar";
 import { FaPlay } from "react-icons/fa";
 import Services from "./Services";
 import Review from "./Review";
-import ReviewSecond from "./ReviewSecond";
 import Membership from "./Membership";
 import Footer from "./Footer";
 
@@ -81,6 +80,7 @@ export default function Home() {
                 src="./logo.png"
                 alt="logo_home"
                 style={{ height: "35px" }}
+                loading="lazy"
               />
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
@@ -131,6 +131,7 @@ export default function Home() {
             <img
               src="./review1.jpg"
               alt="review_home"
+              loading="lazy"
               style={{
                 height: "50px",
                 borderRadius: "6px",
@@ -145,11 +146,11 @@ export default function Home() {
                 Favorite Barberman
               </p>
               <div>
-<img src="./star.png" style={{height:'14px',marginRight:'2px'}}/>
-<img src="./star.png" style={{height:'14px',marginRight:'2px'}}/>
-<img src="./star.png" style={{height:'14px',marginRight:'2px'}}/>
-<img src="./star.png" style={{height:'14px',marginRight:'2px'}}/>
-<img src="./emptystar.png" style={{height:'14px',marginRight:'2px'}}/>
+<img loading="lazy" src="./star.png" style={{height:'14px',marginRight:'2px'}}/>
+<img loading="lazy" src="./star.png" style={{height:'14px',marginRight:'2px'}}/>
+<img loading="lazy" src="./star.png" style={{height:'14px',marginRight:'2px'}}/>
+<img loading="lazy" src="./star.png" style={{height:'14px',marginRight:'2px'}}/>
+<img loading="lazy" src="./emptystar.png" style={{height:'14px',marginRight:'2px'}}/>
 
 
 
@@ -190,6 +191,7 @@ export default function Home() {
             <img
               src="./review2.jpg"
               alt="review_home"
+              loading="lazy"
               style={{
                 height: "50px",
                 borderRadius: "6px",
@@ -212,6 +214,7 @@ export default function Home() {
               }}
               src="./home.png"
               alt="homeImg"
+              loading="lazy"
             />
           </div>
         </div>

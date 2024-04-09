@@ -85,27 +85,27 @@ export default function ReviewSecond() {
             clean&quot;
           </p>
           <div style={{ display: "flex",alignItems:'center' }}>
-            <img src="./w1.jpg" style={{ height: "45px" ,borderRadius:'50%'}} />
+            <img loading="lazy" src="./w1.jpg" style={{ height: "45px" ,borderRadius:'50%'}} />
             <div style={{fontFamily: "Raleway, sans-serif",marginLeft:'10px'}}>
               <p><span style={{fontSize:'14px',fontWeight:'600'}}>Bastian Irawan</span> • <span style={{fontSize:'14px',opacity:'0.5'}}>Backpackers</span></p>
               <div>
-                <img
+                <img loading="lazy"
                   src="./star.png"
                   style={{ height: "14px", marginRight: "2px" }}
                 />
-                <img
+                <img loading="lazy"
                   src="./star.png"
                   style={{ height: "14px", marginRight: "2px" }}
                 />
-                <img
+                <img loading="lazy"
                   src="./star.png"
                   style={{ height: "14px", marginRight: "2px" }}
                 />
-                <img
+                <img loading="lazy"
                   src="./star.png"
                   style={{ height: "14px", marginRight: "2px" }}
                 />
-                <img
+                <img loading="lazy"
                   src="./emptystar.png"
                   style={{ height: "14px", marginRight: "2px" }}
                 />

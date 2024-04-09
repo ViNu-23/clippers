@@ -18,7 +18,7 @@ export default function Navbar() {
      <ul style={{ listStyle: "none", padding: 0 }}>
   <li style={{ display: "flex", alignItems: "center" }}>
     <Link to="#" className="links" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
-      <img src="./logo.png" alt="logo_home" style={{ height: '25px' }} />
+      <img loading="lazy" src="./logo.png" alt="logo_home" style={{ height: '25px' }} />
       <span style={{ marginLeft: '5px' }}>Clippers</span>
     </Link>
   </li>
