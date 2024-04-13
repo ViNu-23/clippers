@@ -19,7 +19,7 @@ Experience the best in men's grooming with Clippers, where style meets sophistic
 3. Start the development server: `npm run dev`.
 4. Explore Clippers and elevate your grooming experience!
 
-🔗 [Visit Clippers](https://your-clippers-url.com) | 💻 [View Demo](https://demo-clippers.vercel.app) | 📄 [Documentation](https://clippers-docs.vercel.app)
+💻 [View Demo](https://clippersbarbershop.vercel.app/) | 📄 [Documentation](https://clippers-docs.vercel.app)
 
 #Clippers #Grooming #Barbershop #Vite #VercelLive #TechSavvy 💻🌟
 
