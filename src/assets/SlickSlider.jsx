@@ -2,7 +2,8 @@ import Slider from "react-slick";
 import { FaArrowRight, FaLocationDot } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
- 
+ import { useEffect,useState } from "react";
+
 export default function SlickSlider() {
   const isMobile = useMediaQuery({ maxWidth: 850 });
 
@@ -107,7 +108,7 @@ export default function SlickSlider() {
               </div>
             </div>
             <img
-              loading='eager'
+              loading='lazy'
               src="./shop1.jpg"
               alt="swiper"
               style={{
