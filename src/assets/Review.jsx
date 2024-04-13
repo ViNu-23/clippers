@@ -51,22 +51,6 @@ export default function Review() {
           style={{ position: "relative", width:isMobile?'100%': "60%", marginRight:isMobile?'': "-250px" }}
         >
           <div><SlickSlider />
-          <div
-            style={{
-              backgroundColor: "#fff",
-              borderRadius: "50%",
-              padding: "10px",
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              position: "absolute",
-              top: "45%",
-              right: isMobile?'5%':"20%",
-              zIndex: 900,
-            }}
-          >
-            <FaArrowRight size={20} color="#000" />
-          </div>
           </div>
          
         </div>

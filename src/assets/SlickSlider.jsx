@@ -6,6 +6,26 @@ import { useMediaQuery } from "react-responsive";
 export default function SlickSlider() {
   const isMobile = useMediaQuery({ maxWidth: 850 });
 
+  // eslint-disable-next-line react/prop-types
+  const NextArrow = ({ onClick }) => (
+    <div
+            style={{
+              backgroundColor: "#fff",
+              borderRadius: "50%",
+              padding: "10px",
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              position: "absolute",
+              top: "45%",
+              right: isMobile?'5%':"20%",
+              zIndex: 900,
+            }}
+            onClick={onClick}
+          >
+            <FaArrowRight size={20} color="#000" />
+          </div>
+  );
 
   var settings = {
     dots: true,
@@ -15,6 +35,7 @@ export default function SlickSlider() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    nextArrow: <NextArrow />,
   };
   return (
     <div style={{ width: "100%",overflowX:'hidden',overflowY:'hidden', }}>
@@ -79,13 +100,14 @@ export default function SlickSlider() {
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  cursor:'pointer'
                 }}
               >
                 <FaArrowRight size={20} color="white" />
               </div>
             </div>
             <img
-              loading="lazy"
+              loading='eager'
               src="./shop1.jpg"
               alt="swiper"
               style={{
@@ -158,6 +180,8 @@ export default function SlickSlider() {
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  cursor:'pointer'
+
                 }}
               >
                 <FaArrowRight size={20} color="white" />
@@ -236,6 +260,8 @@ export default function SlickSlider() {
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  cursor:'pointer'
+
                 }}
               >
                 <FaArrowRight size={20} color="white" />
