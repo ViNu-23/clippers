@@ -6,11 +6,16 @@ import Review from "./Review";
 import Membership from "./Membership";
 import Footer from "./Footer";
 import { useMediaQuery } from "react-responsive";
-import ReviewSecond from "./ReviewSecond";
+import { useState,useEffect } from "react";
 
 export default function Home() {
   const isMobile = useMediaQuery({ maxWidth: 750 });
+  const [imageSrc, setImageSrc] = useState(null);
 
+  useEffect(() => {
+    // Set the image source to the root path
+    setImageSrc('home.png');
+  }, []);
   return (
     <>
       <Navbar />
@@ -221,7 +226,7 @@ export default function Home() {
               style={{
                 width: isMobile?"90vw":"42vw",
               }}
-              src="./home.png"
+              src={imageSrc}
               alt="homeImg"
               loading="lazy"
             />
