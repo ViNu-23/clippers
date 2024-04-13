@@ -26,7 +26,7 @@ export default function Home() {
           background: "#f9f9f9",
           padding:isMobile?'0px 20px': "0 75px",
           flexDirection: isMobile ? "column-reverse" : "row",
-          paddingTop:'40px'
+          paddingTop:isMobile?'50px':'20px',
         }}
       >
         <div
@@ -180,7 +180,7 @@ export default function Home() {
               padding: "8px 12px",
               position: "absolute",
               top: isMobile?75:210,
-              right:isMobile?0: 30,
+              right:isMobile?0: -10,
               zIndex: 10,
               display: "flex",
               borderRadius: "10px",
