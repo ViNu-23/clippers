@@ -27,7 +27,7 @@ export default function About() {
             alt="about"
             loading="lazy"
             style={{
-              maxHeight: "50vh",
+              maxHeight: "45vh",
               borderRadius: "4px",
               marginRight: "1vh",
               width: "50%",
@@ -40,7 +40,7 @@ export default function About() {
               src="./about2.jpg"
               alt="about"
               style={{
-                height: "24vh",
+                height: "22vh",
                 borderRadius: "4px",
                 marginBottom: "1vh",
                 width:'100%'
@@ -50,7 +50,7 @@ export default function About() {
             loading="lazy"
               src="./about3.jpg"
               alt="about"
-              style={{ height: "24vh", borderRadius: "4px",width: "100%"}}
+              style={{ height: "22vh", borderRadius: "4px",width: "100%"}}
             />
           </div>
         </div>
