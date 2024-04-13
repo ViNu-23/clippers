@@ -1,6 +1,8 @@
-import Navbar from "./Navbar";
+import { useMediaQuery } from "react-responsive";
 
 export default function Membership() {
+  const isMobile = useMediaQuery({ maxWidth: 950 });
+
   const topRowStyle = {
     background: '#f9f9f9',
     boxShadow: 'rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset',
@@ -14,14 +16,13 @@ export default function Membership() {
   };
   return (
     <>
-      <Navbar />
       <div
         style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          margin: "80px 0px",
-          padding:'0px 75px'
+          padding: isMobile ? "30px 30px" : "40px 75px",
+
         }}
       >
         <button className="btn__home2">
@@ -32,7 +33,7 @@ export default function Membership() {
         <span
           style={{
             fontFamily: "DM Serif Display, serif",
-            fontSize: "35px",
+            fontSize:isMobile?'26px': "35px",
             margin: "10px 0px",
           }}
         >
@@ -42,29 +43,29 @@ export default function Membership() {
           style={{
             fontFamily: "Raleway, sans-serif",
             opacity: "0.6",
-            fontSize: "15px",
-            width: "28%",
+            fontSize:isMobile?'12px': "15px",
+            width:isMobile?'100%': "28%",
             textAlign: "center",
           }}
         >
           Try free trial for days and get unrestricted access to all Our serices
           and features
         </p>
-        <div style={{ marginTop: "40px", display: "flex",justifyContent:'center' }}>
+        <div style={{ marginTop: "40px", display: "flex",justifyContent:'center',flexDirection:isMobile?'column':''}}>
           <div
             className="membership_Plans"
             style={{
               padding: "24px",
-              marginRight: "20px",
+              margin: "10px",
               boxShadow: "rgba(0, 0, 0, 0.05) 0px 0px 0px 1px",
               borderRadius: "10px",
-              width:'25%'
+              width:isMobile?'':'25%'
             }}
           >
             <span
               style={{
                 fontFamily: "DM Serif Display, serif",
-                fontSize: "20px",
+                fontSize: isMobile?'18px':"20px",
               }}
             >
               Basic
@@ -73,7 +74,7 @@ export default function Membership() {
               style={{
                 fontFamily: "Raleway, sans-serif",
                 opacity: "0.6",
-                fontSize: "15px",
+                fontSize: isMobile?'13px':"15px",
               }}
             >
               basic plan for high-quality toilored hair service
@@ -86,7 +87,7 @@ export default function Membership() {
               <span
                 style={{
                   fontFamily: "DM Serif Display, serif",
-                  fontSize: "30px",
+                  fontSize:isMobile?'22px': "30px",
                 }}
               >
                 $450
@@ -103,7 +104,7 @@ export default function Membership() {
             </p>
             <button className="btn__home2" style={{ width: "100%" }}>
               <span style={{ alignItems: "center", fontWeight: "500" }}>
-                Choose this Plan
+                {isMobile ? "Buy" : "Choose this Plan"}
               </span>
             </button>
           </div>
@@ -112,17 +113,17 @@ export default function Membership() {
             className="membership_Plans"
             style={{
               padding: "24px",
-              marginRight: "20px",
+              margin: "10px",
               boxShadow: "rgba(0, 0, 0, 0.05) 0px 0px 0px 1px",
               borderRadius: "10px",
-              width:'25%'
+              width:isMobile?'':'25%'
 
             }}
           >
             <span
               style={{
                 fontFamily: "DM Serif Display, serif",
-                fontSize: "20px",
+                fontSize: isMobile?'18px':"20px",
               }}
             >
               Standard
@@ -131,7 +132,7 @@ export default function Membership() {
               style={{
                 fontFamily: "Raleway, sans-serif",
                 opacity: "0.6",
-                fontSize: "15px",
+                fontSize: isMobile?'13px':"15px",
               }}
             >
               Perfect plan for a gentleman that is looking for something more
@@ -144,7 +145,7 @@ export default function Membership() {
               <span
                 style={{
                   fontFamily: "DM Serif Display, serif",
-                  fontSize: "30px",
+                  fontSize:isMobile?'22px': "30px",
                 }}
               >
                 $600
@@ -161,7 +162,8 @@ export default function Membership() {
             </p>
             <button className="btn__home1" style={{ width: "100%" }}>
               <span style={{ alignItems: "center", fontWeight: "500" }}>
-                Choose this Plan
+              {isMobile ? "Buy" : "Choose this Plan"}
+
               </span>
             </button>
           </div>
@@ -170,17 +172,17 @@ export default function Membership() {
             className="membership_Plans"
             style={{
               padding: "24px",
-              marginRight: "20px",
+              margin: "10px",
               boxShadow: "rgba(0, 0, 0, 0.05) 0px 0px 0px 1px",
               borderRadius: "10px",
-              width:'25%'
+              width:isMobile?'':'25%'
 
             }}
           >
             <span
               style={{
                 fontFamily: "DM Serif Display, serif",
-                fontSize: "20px",
+                fontSize: isMobile?'18px':"20px",
               }}
             >
               Premium
@@ -189,7 +191,7 @@ export default function Membership() {
               style={{
                 fontFamily: "Raleway, sans-serif",
                 opacity: "0.6",
-                fontSize: "15px",
+                fontSize: isMobile?'13px':"15px",
               }}
             >
               Option for this plan to enjoy our 7-Course Service.
@@ -202,7 +204,7 @@ export default function Membership() {
               <span
                 style={{
                   fontFamily: "DM Serif Display, serif",
-                  fontSize: "30px",
+                  fontSize:isMobile?'22px': "30px",
                 }}
               >
                 $700
@@ -219,19 +221,20 @@ export default function Membership() {
             </p>
             <button className="btn__home2" style={{ width: "100%" }}>
               <span style={{ alignItems: "center", fontWeight: "500" }}>
-                Choose this Plan
+              {isMobile ? "Buy" : "Choose this Plan"}
+
               </span>
             </button>
           </div>
         </div>
-        <div className="table" style={{margin:'50px 0px'}}>
-        <table>
+        <div className="table" style={{margin:'20px 0px',fontSize:isMobile?'12px':''}} >
+        <table style={{borderCollapse:'collapse'}}>
       <thead>
         <tr style={topRowStyle}>
-          <th style={{padding:'12px 80px'}}>Services</th>
-          <th style={{padding:'12px 80px'}}>Basic</th>
-          <th style={{padding:'12px 80px'}}>Standard</th>
-          <th style={{padding:'12px 80px'}}>Premium</th>
+          <th style={{padding:isMobile?'5px 15px':'12px 80px'}}>Services</th>
+          <th style={{padding:isMobile?'':'12px 80px'}}>Basic</th>
+          <th style={{padding:isMobile?'':'12px 80px'}}>Standard</th>
+          <th style={{padding:isMobile?'':'12px 80px'}}>Premium</th>
         </tr>
       </thead>
       <tbody>

@@ -5,23 +5,28 @@ import Services from "./Services";
 import Review from "./Review";
 import Membership from "./Membership";
 import Footer from "./Footer";
+import { useMediaQuery } from "react-responsive";
+import ReviewSecond from "./ReviewSecond";
 
 export default function Home() {
+  const isMobile = useMediaQuery({ maxWidth: 750 });
+
   return (
     <>
       <Navbar />
       <div
         style={{
           display: "flex",
-          height: "100vh",
+          height: isMobile ? "" : "100vh",
           background: "#f9f9f9",
-          paddingLeft: "75px",
+          padding:isMobile?'0px 20px': "0 75px",
+          flexDirection: isMobile ? "column-reverse" : "row",
+          paddingTop:'40px'
         }}
       >
         <div
           style={{
-            padding: "0 10px",
-            width: "50%",
+            padding: "10px 10px",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -30,42 +35,43 @@ export default function Home() {
           <span
             style={{
               fontFamily: "DM Serif Display, serif",
-              fontSize: "55px",
+              fontSize: isMobile?'30px':"55px",
             }}
           >
-            {" "}
             We Are Looking to Make Your Handsome
           </span>
           <p
             style={{
               fontFamily: "Raleway, sans-serif",
               opacity: "0.5",
-              fontSize: "20px",
+              fontSize: isMobile?'16px':"20px",
             }}
           >
-            You will leave lookin sharp, relaxed and ready to take on the world,
-            with that swagger in your stride
+            You will leave looking sharp, relaxed and ready to take on the
+            world, with that swagger in your stride
           </p>
 
           <div
             style={{
-              marginTop: "50px",
+              marginTop: "30px",
+              display:'flex'
             }}
           >
-            <button className="btn__home1" style={{ marginRight: "40px" }}>
-              <span>Get started</span>
+            <button className="btn__home1" style={{ marginRight: isMobile?'15px':"40px" ,fontSize:isMobile?'14px':'',padding:isMobile?'12px 26px':''}}>
+              Get started
             </button>
-            <button className="btn__home2">
-              <span style={{ display: "flex", alignItems: "center" }}>
+            <button className="btn__home2" style={{padding:isMobile?'12px 26px':''}}>
+              <span style={{ display: "flex", alignItems: "center" ,fontSize:isMobile?'14px':''}}>
                 <FaPlay size={16} style={{ marginRight: "5px" }} />
                 Watch video
               </span>
             </button>
           </div>
+
           <div
             style={{
               display: "flex",
-              marginTop: "50px",
+              margin: "50px 0px",
             }}
           >
             <div
@@ -98,30 +104,18 @@ export default function Home() {
 
         <div
           style={{
-            width: "50%",
             display: "flex",
-            position: "relative" 
+            position: "relative",
           }}
         >
           <div
             style={{
-              background: "#ebebeb",
-              height: "500px",
-              width: "380px",
-              position: "absolute" ,
-              top: 0,
-              right: 0,
-              zIndex: 1 
-            }}
-          ></div>
-          <div
-            style={{
               background: "#fff",
               padding: "8px 12px",
-              position: "absolute" ,
-              bottom: 100,
+              position: "absolute",
+              bottom: isMobile?20:100,
               left: 0,
-              zIndex: 11 ,
+              zIndex: 11,
               display: "flex",
               borderRadius: "10px",
               alignItems: "center",
@@ -133,30 +127,45 @@ export default function Home() {
               alt="review_home"
               loading="lazy"
               style={{
-                height: "50px",
+                height:isMobile?'40px': "50px",
                 borderRadius: "6px",
                 marginRight: "10px",
               }}
             />
             <div style={{ fontFamily: "Raleway, sans-serif" }}>
-              <span style={{ fontWeight: "500", fontSize: "16px" }}>
+              <span style={{ fontWeight: "500", fontSize:isMobile?'14px': "16px" }}>
                 Jimmy Chairperson
               </span>
-              <p style={{ opacity: "0.6", fontSize: "14px" }}>
+              <p style={{ opacity: "0.6", fontSize:isMobile?'12px': "14px" }}>
                 Favorite Barberman
               </p>
               <div>
-<img loading="lazy" src="./star.png" style={{height:'14px',marginRight:'2px'}}/>
-<img loading="lazy" src="./star.png" style={{height:'14px',marginRight:'2px'}}/>
-<img loading="lazy" src="./star.png" style={{height:'14px',marginRight:'2px'}}/>
-<img loading="lazy" src="./star.png" style={{height:'14px',marginRight:'2px'}}/>
-<img loading="lazy" src="./emptystar.png" style={{height:'14px',marginRight:'2px'}}/>
-
-
-
-
+                <img
+                  loading="lazy"
+                  src="./star.png"
+                  style={{ height:isMobile?'10px': "14px", marginRight: "2px" }}
+                />
+                <img
+                  loading="lazy"
+                  src="./star.png"
+                  style={{ height:isMobile?'10px': "14px", marginRight: "2px" }}
+                />
+                <img
+                  loading="lazy"
+                  src="./star.png"
+                  style={{ height:isMobile?'10px': "14px", marginRight: "2px" }}
+                />
+                <img
+                  loading="lazy"
+                  src="./star.png"
+                  style={{ height:isMobile?'10px': "14px", marginRight: "2px" }}
+                />
+                <img
+                  loading="lazy"
+                  src="./emptystar.png"
+                  style={{ height:isMobile?'10px': "14px", marginRight: "2px" }}
+                />
               </div>
-
             </div>
           </div>
 
@@ -164,10 +173,10 @@ export default function Home() {
             style={{
               background: "#fff",
               padding: "8px 12px",
-              position: "absolute" ,
-              top: 150,
-              right: 30,
-              zIndex: 10 ,
+              position: "absolute",
+              top: isMobile?75:210,
+              right:isMobile?0: 30,
+              zIndex: 10,
               display: "flex",
               borderRadius: "10px",
               alignItems: "center",
@@ -178,14 +187,14 @@ export default function Home() {
               <span
                 style={{
                   fontWeight: "500",
-                  fontSize: "16px",
+                  fontSize: isMobile?'14px':"16px",
                   direction: "ltr",
                 }}
               >
-                Jimmy Chairperson
+                Jimmy Anderson
               </span>
-              <p style={{ opacity: "0.6", fontSize: "14px", direction: "ltr" }}>
-                Favorite Barberman
+              <p style={{ opacity: "0.6", fontSize:isMobile?'12px': "14px"}}>
+                Best experience
               </p>
             </div>
             <img
@@ -193,7 +202,7 @@ export default function Home() {
               alt="review_home"
               loading="lazy"
               style={{
-                height: "50px",
+                height: isMobile?'35px':"50px",
                 borderRadius: "6px",
                 marginLeft: "10px",
               }}
@@ -201,7 +210,7 @@ export default function Home() {
           </div>
           <div
             style={{
-              position: "relative" ,
+              position: "relative",
               zIndex: 10,
               alignItems: "end",
               display: "flex",
@@ -210,7 +219,7 @@ export default function Home() {
           >
             <img
               style={{
-                width: "550px",
+                width: isMobile?"90vw":"42vw",
               }}
               src="./home.png"
               alt="homeImg"
@@ -221,9 +230,9 @@ export default function Home() {
       </div>
       <About />
       <Services />
-      <Review/>
-      <Membership/>
-      <Footer/>
+      <Review />
+      <Membership />
+      <Footer />
     </>
   );
 }

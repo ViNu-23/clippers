@@ -1,19 +1,23 @@
 import Slider from "react-slick";
 import { FaArrowRight, FaLocationDot } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
-
+import { useMediaQuery } from "react-responsive";
+ 
 export default function SlickSlider() {
+  const isMobile = useMediaQuery({ maxWidth: 850 });
+
+
   var settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow:isMobile? 1:  2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
   };
   return (
-    <div style={{ width: "100%" }}>
+    <div style={{ width: "100%",overflowX:'hidden',overflowY:'hidden', }}>
       <Slider {...settings}>
         <div>
           <div style={{ position: "relative" }}>
@@ -22,14 +26,14 @@ export default function SlickSlider() {
                 position: "absolute",
                 bottom: 20,
                 left: "50%" /* Adjusted */,
-                transform: "translate(-50%, 0)" /* Added */,
+                transform: "translate(-50%, 0)" ,
                 zIndex: 1,
                 background: "#fff",
                 padding: "14px",
                 borderRadius: "6px",
                 display: "flex",
                 alignItems: "center",
-                width: "70%",
+                width: "75%",
               }}
             >
               <div style={{ width: "100%", marginRight: "25px" }}>
@@ -108,7 +112,7 @@ export default function SlickSlider() {
                 borderRadius: "6px",
                 display: "flex",
                 alignItems: "center",
-                width: "70%",
+                width: "75%",
               }}
             >
               <div style={{ width: "100%", marginRight: "25px" }}>
@@ -186,7 +190,7 @@ export default function SlickSlider() {
                 borderRadius: "6px",
                 display: "flex",
                 alignItems: "center",
-                width: "70%",
+                width: "75%",
               }}
             >
               <div style={{ width: "100%", marginRight: "25px" }}>

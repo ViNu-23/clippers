@@ -1,16 +1,27 @@
 import { LuCopyright } from "react-icons/lu";
-import { FaGithubSquare ,FaLinkedin,FaHeadset} from "react-icons/fa";
+import { FaGithubSquare, FaLinkedin, FaHeadset } from "react-icons/fa";
 import { CgWebsite } from "react-icons/cg";
+import { useMediaQuery } from "react-responsive";
+
 export default function Footer() {
+  const isMobile = useMediaQuery({ maxWidth: 950 });
+
   return (
     <>
-      <div style={{ padding: "0 75px", background: "#000", color: "#fff" }}>
+      <div
+        style={{
+          padding: isMobile ? "20px 30px" : "20px 75px",
+          background: "#000",
+          color: "#fff",
+        }}
+      >
         <div
           style={{
             display: "flex",
             padding: "50px 0px",
             justifyContent: "space-between",
             borderBottom: "1px solid #f9f9f9",
+            flexDirection: isMobile ? "column" : "row",
           }}
         >
           <div>
@@ -33,29 +44,13 @@ export default function Footer() {
                 fontSize: "16px",
                 margin: "14px 0",
                 opacity: "0.6",
-                width: "55%",
+                width: isMobile ? "100%" : "55%",
               }}
             >
               Whatever it is that you care about men grooming working on it
               Clippers help in lots of different ways
             </p>
-            <button
-              style={{
-                borderTopLeftRadius: "18px",
-                borderTopRightRadius: "18px",
-                borderBottomLeftRadius: "4px",
-                borderBottomRightRadius: "18px",
-                border: "1px solid #fff",
-                margin: "24px 0px",
-                padding: "12px 30px",
-                fontFamily: "Raleway, sans-serif",
-                fontSize: "16px",
-                color: "#fff",
-                background: "#000",
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
+            <button className="help__center">
               <span style={{ marginRight: "10px" }}>Visit the help center</span>
               <span>
                 <FaHeadset size={18} />
@@ -84,71 +79,163 @@ export default function Footer() {
                   height: "26px",
                   width: "200px",
                 }}
-                placeholder="Enter your email"
+                placeholder="youremail@gmail.com"
               />
-              <button
-                style={{
-                  border: "1px solid #fff",
-                  padding: "10px 20px",
-                  fontFamily: "Raleway, sans-serif",
-                  fontSize: "16px",
-                  color: "#fff",
-                  background: "#000",
-                  borderRadius: "18px",
-                  marginLeft: "10px",
-                }}
-              >
-                Subscribe
-              </button>
+              <button className="subscribe">Subscribe</button>
             </div>
           </div>
         </div>
-        <div style={{ padding: "25px 0px 40px 0px", display: "flex", fontFamily: "Raleway, sans-serif",justifyContent:'space-between',borderBottom:'1px solid #fff' }}>
-          
-          <div style={{ display: "flex",flexDirection:'column',width:'15%',margin:'10px' }}>
-            <span style={{fontWeight:'500',fontSize:'16px',margin:'10px 0'}}>NAVIGATION</span>
-            <span style={{fontSize:'14px',margin:'4px 0'}}>About us</span>
-            <span style={{fontSize:'14px',margin:'4px 0'}}>Career</span>
-            <span style={{fontSize:'14px',margin:'4px 0'}}>Contact us</span>
-            <span style={{fontSize:'14px',margin:'4px 0'}}>Blog</span>
+        <div
+          style={{
+            padding: "25px 0px 20px 0px",
+            display: "flex",
+            fontFamily: "Raleway, sans-serif",
+            justifyContent: "space-between",
+            borderBottom: "1px solid #fff",
+            flexWrap: "wrap",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: isMobile ? "40%" : "15%",
+              margin: "10px",
+
+            }}
+          >
+            <span
+              style={{ fontWeight: "500", fontSize:isMobile?'14px': "16px", margin: "10px 0" }}
+            >
+              NAVIGATION
+            </span>
+            <span style={{ fontSize:isMobile?'12px': "14px", margin: "4px 0" }}>About us</span>
+            <span style={{ fontSize: isMobile?'12px':"14px", margin: "4px 0" }}>Career</span>
+            <span style={{ fontSize:isMobile?'12px': "14px", margin: "4px 0" }}>
+              Contact us
+            </span>
+            <span style={{ fontSize: "14px", margin: "4px 0" }}>Blog</span>
           </div>
 
-          <div style={{ display: "flex",flexDirection:'column',width:'15%',margin:'10px' }}>
-            <span style={{fontWeight:'500',fontSize:'16px',margin:'10px 0'}}>SOLUTIONS</span>
-            <span style={{fontSize:'14px',margin:'4px 0'}}>Hair</span>
-            <span style={{fontSize:'14px',margin:'4px 0'}}>Beard</span>
-            <span style={{fontSize:'14px',margin:'4px 0'}}>Skin</span>
-            <span style={{fontSize:'14px',margin:'4px 0'}}>Anti dandruf</span>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: isMobile ? "40%" : "15%",
+              margin: "10px",
+            }}
+          >
+            <span
+              style={{ fontWeight: "500", fontSize:isMobile?'14px': "16px", margin: "10px 0" }}
+            >
+              SOLUTIONS
+            </span>
+            <span style={{ fontSize:isMobile?'12px': "14px", margin: "4px 0" }}>Hair</span>
+            <span style={{ fontSize: isMobile?'12px':"14px", margin: "4px 0" }}>Beard</span>
+            <span style={{ fontSize: isMobile?'12px':"14px", margin: "4px 0" }}>Skin</span>
+            <span style={{ fontSize: isMobile?'12px':"14px", margin: "4px 0" }}>
+              Anti dandruf
+            </span>
           </div>
 
-          <div style={{ display: "flex",flexDirection:'column', width:'15%',margin:'10px'}}>
-            <span style={{fontWeight:'500',fontSize:'16px',margin:'10px 0'}}>NOTIFICATION</span>
-            <span style={{fontSize:'14px',margin:'4px 0'}}>Community Policy</span>
-            <span style={{fontSize:'14px',margin:'4px 0'}}>Safety</span>
-            <span style={{fontSize:'14px',margin:'4px 0'}}>Cookies</span>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: isMobile ? "40%" : "15%",
+              margin: "10px",
+            }}
+          >
+            <span
+              style={{ fontWeight: "500", fontSize:isMobile?'14px': "16px", margin: "10px 0" }}
+            >
+              NOTIFICATION
+            </span>
+            <span style={{ fontSize:isMobile?'12px': "14px", margin: "4px 0" }}>
+              Community Policy
+            </span>
+            <span style={{ fontSize: isMobile?'12px':"14px", margin: "4px 0" }}>Safety</span>
+            <span style={{ fontSize: isMobile?'12px':"14px", margin: "4px 0" }}>Cookies</span>
           </div>
 
-          <div style={{ display: "flex",flexDirection:'column', width:'15%',margin:'10px'}}>
-            <span style={{fontWeight:'500',fontSize:'16px',margin:'10px 0'}}>HELP</span>
-            <span style={{fontSize:'14px',margin:'4px 0'}}>FAQ</span>
-            <span style={{fontSize:'14px',margin:'4px 0'}}>Term of Use</span>
-            <span style={{fontSize:'14px',margin:'4px 0'}}>Privacy Policy</span>
-            <span style={{fontSize:'14px',margin:'4px 0'}}>Insights</span>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: isMobile ? "40%" : "15%",
+              margin: "10px",
+            }}
+          >
+            <span
+              style={{ fontWeight: "500", fontSize:isMobile?'14px': "16px", margin: "10px 0" }}
+            >
+              HELP
+            </span>
+            <span style={{ fontSize: isMobile?'12px':"14px", margin: "4px 0" }}>FAQ</span>
+            <span style={{ fontSize: isMobile?'12px':"14px", margin: "4px 0" }}>
+              Term of Use
+            </span>
+            <span style={{ fontSize:isMobile?'12px': "14px", margin: "4px 0" }}>
+              Privacy Policy
+            </span>
+            <span style={{ fontSize: isMobile?'12px':"14px", margin: "4px 0" }}>Insights</span>
           </div>
 
-          <div style={{ display: "flex",flexDirection:'column',width:'15%',margin:'10px' }}>
-            <span style={{fontWeight:'500',fontSize:'16px',margin:'10px 0'}}>LANGUAGE</span>
-            <span style={{fontSize:'14px',margin:'4px 0'}}>About us</span>
-            
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: isMobile ? "40%" : "15%",
+              margin: "10px",
+            }}
+          >
+            <span
+              style={{ fontWeight: "500", fontSize:isMobile?'14px': "16px", margin: "10px 0" }}
+            >
+              LANGUAGE
+            </span>
+            <span style={{ fontSize: isMobile?'12px':"14px", margin: "4px 0" }}>About us</span>
           </div>
         </div>
-        <div style={{padding:'10px 0px',display:'flex',justifyContent:'space-between',fontFamily: "Raleway, sans-serif"}}>
-          <div style={{display:'flex',alignItems:'center'}}><LuCopyright size={20}/> <span style={{marginLeft:'8px'}}>2022 Clippers. lnc All rights reserved.</span></div>
-          <div> Made With 🤍 By <a href="https://github.com/ViNu-23">ViNu</a></div>
+        <div
+          style={{
+            padding: "10px 0px",
+            display: "flex",
+            justifyContent: "space-between",
+            fontFamily: "Raleway, sans-serif",
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <LuCopyright size={isMobile ? 15 : 20} />{" "}
+            <span
+              style={{ marginLeft: "8px", fontSize: isMobile ? "12px" : "" }}
+            >
+              2022 Clippers. lnc All rights reserved.
+            </span>
+          </div>
           <div>
-            <FaGithubSquare size={25} style={{marginRight:'10px'}}/>
-            <FaLinkedin size={25} style={{marginRight:'10px'}}/>
-            <CgWebsite size={25}/></div>
+            <a href="https://github.com/ViNu-23" className="social_links">
+              <FaGithubSquare
+                size={isMobile ? 15 : 25}
+                style={{ marginRight: "10px" }}
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/vijay-kumar-v-231a18233/"
+              className="social_links"
+            >
+              <FaLinkedin
+                size={isMobile ? 15 : 25}
+                style={{ marginRight: "10px" }}
+              />
+            </a>
+            <a
+              href="https://vijayvportfolio.vercel.app/"
+              className="social_links"
+            >
+              <CgWebsite size={isMobile ? 15 : 25} />
+            </a>
+          </div>
         </div>
       </div>
     </>
