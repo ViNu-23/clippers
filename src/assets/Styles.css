@@ -18,7 +18,8 @@ li {
 .btn__home1,
 .btn__home2,
 .button__about,
-.help {
+.help, 
+.appointment{
   border: none;
   padding: 12px 30px;
   border-radius: 22px;
@@ -28,7 +29,8 @@ li {
 }
 .btn__home1,
 .button__about,
-.help {
+.help,
+.appointment {
   background-color: black;
   color: aliceblue;
 }
@@ -104,4 +106,13 @@ color: #000;
   cursor: pointer;
   text-decoration: none; 
   color: #fff;
+}
+.book__appointment{
+  background-color: #000;
+  color: #fff;
+  border-radius: 18px;
+  padding: 8px 20px;
+}
+.book__appointment__mobile{
+  margin-top: 15px;
 }

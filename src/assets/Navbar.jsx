@@ -100,7 +100,7 @@ export default function Navbar() {
                 alignItems: "center",
               }}
             >
-              <li>
+              <li className="book__appointment">
                 <Link to="/Appointment" className="links">
                   <span>Book Appointment</span>
                 </Link>
@@ -200,7 +200,7 @@ export default function Navbar() {
                 alignItems: "center",
               }}
             >
-              <li style={listItem}>
+              <li className="book__appointment book__appointment__mobile">
                 <Link to="/Appointment" className="links">
                   <span>Book Appointment</span>
                 </Link>
